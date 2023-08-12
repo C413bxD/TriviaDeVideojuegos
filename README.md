@@ -1,4 +1,4 @@
-# Trivial Juego (trivial-juego)
+# Trivial Juego (trivial-juego) realizado en Quasar y Vue2
 
 Juego de preguntas hecho framework Quasar
 
