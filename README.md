@@ -1,6 +1,6 @@
 # Trivial Juego (trivial-juego) realizado en Quasar y Vue2
 
-(Preview) [https://64d6e91e95284a3d0f743b23--candid-zabaione-4d41cd.netlify.app/#/]
+[Preview] (https://64d6e91e95284a3d0f743b23--candid-zabaione-4d41cd.netlify.app/#/)
 Juego de preguntas hecho framework Quasar
 
 ## Install the dependencies
