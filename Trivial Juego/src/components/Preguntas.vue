@@ -42,6 +42,7 @@ export default {
   mounted() {
     this.getPreguntas();
   },
+  //creamos una data con la cantidad de preguntas, en la pregunta que nos encontramos(actual), y su puntaje
   data() {
     return {
       total: 15,
@@ -51,9 +52,9 @@ export default {
       preguntas: [],
     };
   },
+  //consumimos el api
   methods: {
     async getPreguntas() {
-      // const res=await axios.get("https://opentdb.com/api.php?amount=10&category=26")
       const res = await axios.get("https://opentdb.com/api.php", {
         params: {
           amount: this.total,
@@ -62,6 +63,7 @@ export default {
           type: "multiple",
         },
       });
+      //mapeamos lo que optenemos del api y obtemos las respuestas correctas e incorrectas
       this.preguntas = res.data.results.map((x) => {
         x.list = [...x.incorrect_answers, x.correct_answer];
         x.list.sort();
@@ -70,8 +72,8 @@ export default {
       this.pregunta_actual = this.preguntas[0];
       this.actual = 0;
     },
+    //funcion para validar las respuestas, si la respuesta es correcta aumentamos en 1, tambien avanzamos 1 pregunta hasta llegar al total y redirigimos a la otra vista
     validarRespuesta(answer) {
-
       if (answer == this.pregunta_actual.correct_answer) {
         this.puntaje++;
       }

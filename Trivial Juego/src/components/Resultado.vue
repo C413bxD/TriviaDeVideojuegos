@@ -1,3 +1,4 @@
+<!-- mostramos el score que tuvo el jugador y usamos el href para compartir en twitter -->
 <template>
   <q-page class="flex flex-center">
     <div>
