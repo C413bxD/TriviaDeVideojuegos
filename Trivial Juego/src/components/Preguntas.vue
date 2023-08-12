@@ -1,20 +1,26 @@
 <template>
   <div>
-    <p class="row justify-end q-mt-sm q-mr-md">puntaje: 8pts</p>
+    <p class="row justify-end q-mt-sm q-mr-md">Username</p>
+
     <q-page class="flex flex-center">
-      <div>
-        <q-linear-progress
+      <q-linear-progress
           stripe
           rounded
           size="20px"
+
           :value="progreso"
           color="black"
           class="q-mt-sm"
+          style="width: 70%;"
         />
-        <h3 class="text-center" text-color="black">
+      <div>
+        <h6 class="text-center q-ma-xs" text-color="black">
+          Pregunta {{ pregunta_actual.category }}
+        </h6>
+        <h4 class="text-center" text-color="black">
           ¿Pregunta {{ pregunta_actual.question }}?
-        </h3>
-        <div class="row justify-center">
+        </h4>
+        <div class="row justify-center q-gutter-md">
           <q-btn
             v-for="answer in pregunta_actual.list"
             color="white"
@@ -27,9 +33,6 @@
         </div>
       </div>
     </q-page>
-    <pre>
-      {{ preguntas }}
-    </pre>
   </div>
 </template>
 
