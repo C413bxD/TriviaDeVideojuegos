@@ -7,7 +7,7 @@
 
     <q-select  outlined v-model="modelDificultad" :options="dificultad" label="Seleccone la dificultad"  class="q-mb-md" />
       <div class="row justify-center">
-        <q-btn  color="black" label="Black" @click="jugar()" />
+        <q-btn  color="black" label="Jugar" :disabled="!(modelCategoria && modelDificultad)" @click="jugar()" />
       </div>
     </div>
 
