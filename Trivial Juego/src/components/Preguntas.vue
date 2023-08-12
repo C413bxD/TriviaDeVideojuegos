@@ -14,7 +14,7 @@
           style="width: 70%;"
         />
       <div>
-        <h6 class="text-center q-ma-xs" text-color="black">
+        <h6 class="text-center q-ma-xs text-blue-grey-13" text-color="black">
           Pregunta {{ pregunta_actual.category }}
         </h6>
         <h4 class="text-center" text-color="black">
@@ -71,7 +71,7 @@ export default {
       this.actual = 0;
     },
     validarRespuesta(answer) {
-      console.log("voy a validar la respuesta ", answer);
+
       if (answer == this.pregunta_actual.correct_answer) {
         this.puntaje++;
       }

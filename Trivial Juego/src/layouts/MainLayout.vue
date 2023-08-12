@@ -6,7 +6,7 @@
           Trivial Juego
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>Realizado en Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -28,7 +28,7 @@ export default {
   data () {
     return {
       leftDrawerOpen: false,
-      essentialLinks: linksData
+
     }
   }
 }
